@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <title>Document</title>
+	
+	<style>
+
+          ul{
+		   list-style-type:none;
+		   margin:0;
+		   padding:0;
+		   overflow:hidden;
+		   background-color:black;
+		   }
+		   
+		   li{
+		   float:left;
+		   }
+		   
+		   li a{
+		   color:white;
+		   display:block;
+		   text-align:center;
+		   padding:16px;
+		   text-decoration:none;
+		   }
+		   
+		   li a:hover{
+		   background-color:gray;
+		   }
+		
+        body
+		{ 
+		  background-image: url('A.jpg'); /* Replace with your image path */
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      font-family: Arial, sans-serif;
+		 }
+      </style>
+</head>
+<body>
+
+    <h1 align="center"><marquee> ACUS Higher Education Centre  </marquee> </h1>	
+    <hr>	
+
+	<ul align="center">
+	   <li> <a href="HOME.html">HOME</a></li>
+	   <li> <a href="APPLICATION.html">APPLICATION FORM</a></li>
+	   <li> <a href="RULES FOR THE APPLICANT.html">RULES FOR THE APPLICANT</a></li>
+	   <li> <a href="BILL PAYMENT.html"> BILL PAYMENT</a></li>
+    </ul>
+	 
+    
+	
+	
+    <h1 align="center">Bill Payment</h1>
+    <div class="form">
+      <center><font color="white">  
+        <form align="center" action="#" name="myform" id="table">
+            <table align="center" bgcolor="#00008B">
+            
+                <tr>
+                    <td>    <label for="">First Name:</label></td>
+                    <td> <input type="text" name="fname" id="fname" required></td>
+                </tr>
+               
+                <tr>
+                    <td><label for="">Last Name:</label></td>
+                    <td><input type="text" name="lname" id="lname" required></td>
+                </tr>
+                
+                <tr>
+                    <td><label for="">Register No:</label></td>
+                    <td><input type="text" name="regno" id="regno" required></td>
+                </tr>
+                <tr>
+                    <td><label for="">Semester:</label></td>
+                    <td><input type="text" name="smstr" id="smstr" ></td>
+                </tr>
+				
+				<tr>
+                    <td><label for="">Course:</label></td>
+                    <td><input type="text" name="smstr" id="smstr" ></td>
+                </tr>
+
+                <tr>
+                    <td><label for="">Registration Fees:</label></td>
+                    <td><input type="text" name="rgsfees" id="rgsfees" ></td>
+                </tr>
+
+                <tr>
+                    <td><label for="">Study Fees:</label></td>
+                    <td><input type="text" name="stdyfees" id="stdyfees"></td>
+                </tr>
+
+                <tr>
+                    <td><label for="">Total:</label></td>
+                    <td><input type="text" name="total" id="total" ></td>
+                </tr>
+            </table>
+            <br>
+            <input type="submit" value="Save" onclick="validate()" >&nbsp;&nbsp;
+            <input type="reset" value="Cancel">&nbsp;&nbsp;
+            <input type="reset" value="Clear">&nbsp;&nbsp;
+                
+        </center>
+        </form>
+		</font>
+       
+        </div>
+    </div>
+        
+        
+		
+        <h1 align="center">Payment Details</h1>
+<font color="White">
+        <table align="center" border="1" cellspacing="0" width="30%" height="100%" bgcolor="#00008B">
+            <tr>
+			    <th>NO:</th>
+			    <th>Course</th>
+                <th>Registration Fees</th>
+                <th>Study Fees</th>
+            </tr>
+
+            <tr>
+			    
+                <td>1</td>
+				<td>Diploma in IT</td>
+                <td>1,000</td>
+                <td>35,000</td>
+            </tr>
+
+            <tr>
+                <td>2</td>
+				<td>Diploma in HR</td>
+                <td>2,000</td>
+                <td>22,000</td>
+            </tr>
+
+            <tr>
+                <td>3</td>
+				<td>Diploma in Management Studies</td>
+                <td>2,000</td>
+                <td>40,000</td>
+            </tr>
+
+            <tr>
+                <td>4</td>
+				<td>Diploma in Accounting and Finance</td>
+                <td>2,000</td>
+                <td>55,000</td>
+            </tr>
+			
+			<tr>
+                <td>5</td>
+				<td>Diploma in Engineering</td>
+                <td>2,000</td>
+                <td>65,000</td>
+            </tr>
+		  <tr>
+                <td>6</td>
+				<td>Diploma in Nursing</td>
+                <td>2,000</td>
+                <td>45,000</td>
+            </tr>
+        </table>
+		</font>
+    
+   
+    <script>
+	
+        function validate(){
+            let letter = /^[A-za-z\s]+$/;
+            let reg_no = /^[#.0-9a-za-z\s,-]+$/;
+
+            let fname = document.getElementById('fname').value;
+            let lname = document.getElementById('lname').value;
+            let regno = document.getElementById('regno').value;
+            let smstr = document.getElementById('smstr').value;
+            let rgsfees = document.getElementById('rgsfees').value;
+            let stdyfees = document.getElementById('stdyfees').value;
+            
+
+            if (fname == ""){
+                alert("First Name is Empty");
+            }else if (letter.test(fname)=== false){
+                alert("First Name Must be Letter Only")
+            }else if (lname == ""){
+                alert("Last Name is Empty");
+            }else if (letter.test(lname)=== false){
+                alert("Last Name Must be Letter Only")
+            }else if (regno == ""){
+                alert("Enter Your Registration Number");
+            }else if (reg_no.test(regno)=== false){
+                alert("Correctly Type Your Registration Number")
+            }else if (smstr == ""){
+                alert("Fill the smstr Colum");
+            }else if (reg_no.test(smstr)=== false){
+                alert("Re-type the Semester");
+            }else if(rgsfees == ""){
+                alert("Fill The Colum");
+            }else if (stdyfees == ""){
+                alert("Fill The Colum")
+            }else {
+                alert("Data Saved")
+            }
+
+            
+            var x= parseInt(document.getElementById('rgsfees').value);
+            var y= parseInt(document.getElementById('stdyfees').value);
+            var Total= x+y;
+            document.getElementById('total').innerHTML=Total;
+            
+           
+        }
+
+        function add(){
+            var x= parseInt(document.getElementById('rgsfees').value);
+            var y= parseInt(document.getElementById('stdyfees').value);
+            var Total= x+y;
+            document.getElementById('total').innerHTML=Total;
+
+        }
+
+        
+        
+        </script>
+	</body>	
+		<!--Footer Section-->
+<footer style="background-color: #111; color: #fff; padding: 30px 0; text-align: center;">
+  <div style="max-width: 1200px; margin: auto;">
+    <p style="font-size: 18px; margin-bottom: 10px;">ACUS Higher Education Centre</p>
+    <p style="font-size: 14px; color: #ccc;">
+      Address: No.123, Galle Road , Panadura , Srilanka <br>
+      Phone: 07* **** *** | Email: info@acusedu.com
+    </p>
+    <p style="margin-top: 15px; font-size: 13px; color: #999;">
+      © 2025 ACUS Higher Education Centre. All rights reserved.
+    </p>
+  </div>
+</footer>
+
+		
+
+</html>
